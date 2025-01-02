@@ -6,13 +6,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <div id="bookmarks"></div>
+        <form id="bookmark-form" style="margin-top: 20px;">
+            <input type="name" id="name" placeholder="Enter Name" required size="20">
+            <input type="url" id="url" placeholder="Enter website URL" required size="50">
+            <button type="submit"> + </button>
+        </form>
+    </div>
+
     <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
-        <div style="width: 45%;">
+        <div style="width: 45%; text-align: center;">
             <form action="https://chat.openai.com?hints=search&ref=ext" method="get">
                 <input type="text" id="chatgptQuery" name="q" placeholder="Ask ChatGPT..." style="width: 80%; padding: 8px;" autofocus>
             </form>
         </div>
-        <div style="width: 45%;">
+        <div style="width: 45%; text-align: center;">
             <form action="https://www.google.com/search" method="get" target="_blank">
                 <input type="text" name="q" placeholder="Search Google..." style="width: 80%; padding: 8px;">
             </form>
@@ -27,7 +36,6 @@
         <div style="text-align: center;">
             <div id="usEstClock" class="clock"></div>
             <h4>New York</h4>
-
         </div>
         <div style="text-align: center;">
             <div id="usPstClock" class="clock"></div>
@@ -41,29 +49,26 @@
         <button id="prevBtn">←</button>
         <button id="nextBtn">→</button>
     </div>
+
     <div id="calendar" class="calendar-container" style="justify-content: center;"></div>
-<hr>
-<div style="display: flex; justify-content: space-around;">
-    <div style="width: 45%; text-align: center;">
-        <div id="bookmarks"></div>
-        <form id="bookmark-form">
-            <input type="name" id="name" placeholder="Enter Name" required size="20">
-            <input type="url" id="url" placeholder="Enter website URL" required size="50">
-            <button type="submit"> + </button>
-        </form>
-    </div>
-    <div style="width: 45%; text-align: center;">
-        <div id="upcomingHolidays" style="text-align: center; margin-top: 20px;"></div>
-        <div style="text-align: right; margin-top: 20px;">
-            <div><span class="us-holiday">■</span> US Holiday</div>
-            <div><span class="in-holiday">■</span> India Holiday</div>
-            <div><span class="in-restricted-holiday">■</span> India Restricted Holiday</div>
+
+
+
+    <hr>
+
+    <div style="display: flex; justify-content: space-around;">
+        <div style="width: 45%; text-align: center;">
+            <div id="upcomingHolidays" style="text-align: center; margin-top: 20px;"></div>
+            <div style="text-align: right; margin-top: 20px;">
+                <div><span class="us-holiday">■</span> US Holiday</div>
+                <div><span class="in-holiday">■</span> India Holiday</div>
+                <div><span class="in-restricted-holiday">■</span> India Restricted Holiday</div>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="clocks.js"></script>
-<script src="bookmark.js"></script>
-<script src="calendar.js"></script>
+    <script src="clocks.js"></script>
+    <script src="bookmark.js"></script>
+    <script src="calendar.js"></script>
 </body>
 </html>
